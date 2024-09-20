@@ -18,5 +18,12 @@ router.get('/', (req, res) => {
 // Use the router
 app.use('/.netlify/functions/app', router);
 
+// Logic for testing locally
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+  });
+}
 
 module.exports.handler = serverless(app);

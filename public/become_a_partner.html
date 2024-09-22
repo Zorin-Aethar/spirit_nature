@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+    <style type="text/tailwindcss">
+        /* These styles will all be purged */
+            @tailwind base;
+            @tailwind components;
+            @tailwind utilities;
+
+            /* These styles will be purged */
+
+            @layer base {
+                :root {
+                    --color-cyan-500: theme('colors.cyan.500');
+                    --color-purple-500: theme('colors.purple.500');
+                }
+                @font-face {
+                    font-family: IBM Plex Sans;
+                    font-weight: 400;
+                    src: url('https://cdn.rareblocks.xyz/fonts/IBMPlexSans/IBMPlexSans-Light.woff') format('woff');
+                }
+                @font-face {
+                    font-family: IBM Plex Sans;
+                    font-weight: 400;
+                    font-style: italic;
+                    src: url('https://cdn.rareblocks.xyz/fonts/IBMPlexSans/IBMPlexSans-LightItalic.woff') format('woff');
+                }
+
+                @font-face {
+                    font-family: IBM Plex Sans;
+                    font-weight: 500;
+                    src: url('https://cdn.rareblocks.xyz/fonts/IBMPlexSans/IBMPlexSans-Regular.woff') format('woff2');
+                }
+                @font-face {
+                    font-family: IBM Plex Sans;
+                    font-weight: 500;
+                    font-style: italic;
+                    src: url('https://cdn.rareblocks.xyz/fonts/IBMPlexSans/IBMPlexSans-Italic.woff') format('woff2');
+                }
+                @font-face {
+                    font-family: IBM Plex Sans;
+                    font-weight: 600;
+                    src: url('https://cdn.rareblocks.xyz/fonts/IBMPlexSans/IBMPlexSans-Medium.woff') format('woff');
+                }
+                @font-face {
+                    font-family: IBM Plex Sans;
+                    font-weight: 600;
+                    font-style: italic;
+                    src: url('https://cdn.rareblocks.xyz/fonts/IBMPlexSans/IBMPlexSans-MediumItalic.woff') format('woff');
+                }
+                @font-face {
+                    font-family: IBM Plex Sans;
+                    font-weight: 700;
+                    src: url('https://cdn.rareblocks.xyz/fonts/IBMPlexSans/IBMPlexSans-Semibold.woff') format('woff');
+                }
+                @font-face {
+                    font-family: IBM Plex Sans;
+                    font-weight: 700;
+                    font-style: italic;
+                    src: url('https://cdn.rareblocks.xyz/fonts/IBMPlexSans/IBMPlexSans-SemiboldItalic.woff') format('woff');
+                }
+                @font-face {
+                    font-family: IBM Plex Sans;
+                    font-weight: 800;
+                    src: url('https://cdn.rareblocks.xyz/fonts/IBMPlexSans/IBMPlexSans-Bold.woff') format('woff');
+                }
+                @font-face {
+                    font-family: IBM Plex Sans;
+                    font-weight: 800;
+                    font-style: italic;
+                    src: url('https://cdn.rareblocks.xyz/fonts/IBMPlexSans/IBMPlexSans-BoldItalic.woff') format('woff');
+                }
+                body {
+                    font-family: 'IBM Plex Sans';
+                }
+                .font-sans {
+                    font-family: 'IBM Plex Sans';
+                }
+            }
+            @layer components {
+            }
+            @layer utilities {
+            }
+        </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    sans: ['IBM Plex Sans'],
+                },
+                extend: {
+                    colors: {
+                        gray: {
+                            50: '#fafafa',
+                            100: '#f4f4f5',
+                            200: '#e4e4e7',
+                            300: '#d4d4d8',
+                            400: '#a1a1aa',
+                            500: '#71717a',
+                            600: '#52525b',
+                            700: '#3f3f46',
+                            800: '#27272a',
+                            900: '#18181b',
+                        },
+                        base: {
+                            900: '#090914',
+                        },
+                        cyan: {
+                            500: '#6DDCFF',
+                        },
+                        purple: {
+                            500: '#7F60F9',
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>Spirit Nature TV | Explore Your Spirit, Embrace Your Nature</title>
+    <link rel="icon" href="./favicon.ico">
+    <script defer>
+        $(document).ready(function () {
+            $('.download-app-btn').click(function () {
+
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="">
+        <header class="py-4 bg-gray-900 sm:py-6" x-data="{expanded: false}">
+            <div class="px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between">
+                    <div class="shrink-0">
+                        <a href="#" title="" class="flex items-center gap-x-5">
+                            <img class="w-auto h-9" src="./img/spirit nature logo.png" alt="" />
+                            <span
+                                class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#003A74] to-[#1D9A4E]">Spirit
+                                Nature</span>
+                        </a>
+                    </div>
+
+                    <div class="flex md:hidden">
+                        <button type="button" class="text-white" @click="expanded = !expanded"
+                            :aria-expanded="expanded">
+                            <span x-show="!expanded" aria-hidden="true">
+                                <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                            </span>
+
+                            <span x-show="expanded" aria-hidden="true">
+                                <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+
+                    <nav class="hidden space-x-10 md:flex md:items-center md:justify-center lg:space-x-12">
+                        <a href="/" title=""
+                            class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white">
+                            Home
+                        </a>
+                        <a href="/partners" title=""
+                            class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white">
+                            Become a Partner </a>
+
+                        <a href="/about" title=""
+                            class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white">
+                            About Us </a>
+
+                        <a href="/contact" title=""
+                            class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white">
+                            Contact Us </a>
+
+                        <a href="/legal" title=""
+                            class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white">
+                            Legal Notice </a>
+
+                    </nav>
+
+                    <div class="relative hidden md:justify-center md:items-center md:inline-flex group">
+                        <div
+                            class="absolute transition-all duration-200 rounded-full -inset-px bg-gradient-to-r from-[#003A74] to-[#1D9A4E] group-hover:shadow-lg group-hover:shadow-[#1D9A4E]">
+                        </div>
+                        <button
+                            class="relative inline-flex items-center justify-center px-6 py-2 text-base font-normal text-white bg-black border border-transparent rounded-full download-app-btn"
+                            role="button"> Download Mobile App </button>
+                    </div>
+                </div>
+
+                <nav x-show="expanded" x-collapse>
+                    <div class="flex flex-col pt-8 pb-4 space-y-6">
+                        <a href="/" title=""
+                            class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white">
+                            Home </a>
+
+                        <a href="/partners" title=""
+                            class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white">
+                            Become a Partner </a>
+
+                        <a href="/about" title=""
+                            class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white">
+                            About Us </a>
+
+                        <a href="/contact" title=""
+                            class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white">
+                            Contact Us </a>
+
+                        <a href="/legal" title=""
+                            class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white">
+                            Legal Notice </a>
+
+                        <div class="relative inline-flex items-center justify-center group">
+                            <div
+                                class="absolute transition-all duration-200 rounded-full -inset-px bg-gradient-to-r from-cyan-500 to-purple-500 group-hover:shadow-lg group-hover:shadow-cyan-500/50">
+                            </div>
+                            <button
+                                class="relative inline-flex items-center justify-center w-full px-6 py-2 text-base font-normal text-white bg-black border border-transparent rounded-full download-app-btn"
+                                role="button"> Download Mobile App </button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <section
+            class="py-12 bg-gray-900 sm:pb-16 lg:pb-20 xl:pb-24 bg-[url('./img/stock/energy.jpg')] bg-repeat-none bg-center bg-cover bg-blend-multiply">
+            <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+                <div class="grid items-center max-w-5xl grid-cols-1 mx-auto gap-y-8 lg:grid-cols-5 gap-x-16">
+                    <div class="max-w-md mx-auto text-center lg:max-w-none lg:col-span-3">
+                        <h1 class="text-3xl font-semibold text-white uppercase sm:text-3xl lg:text-5xl xl:text-6xl">
+                            Welcome To <br /> <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-[#003A74] to-[#1D9A4E]">Spirit
+                                Nature TV</span>
+                        </h1>
+                        <h3 class="text-xl font-normal text-white uppercase sm:text-2xl lg:text-3xl xl:text-4xl">
+                            Explore Your Spirit, Embrace Your Nature</h3>
+                        <p class="mt-6 text-sm font-normal text-white sm:text-md">Discover spirituality beyond the
+                            bounds of religion and connect deeply with the world around you. Tune in to Spirit
+                            Nature TV for programs that nourish your soul and expand your consciousness.</p>
+                        <div class="mt-8 sm:mt-10">
+                            <a href="#" title=""
+                                class="inline-flex items-center justify-center px-8 py-4 text-base font-normal text-white transition-all duration-200 rounded-full bg-gradient-to-r from-[#003A74] to-[#1D9A4E] hover:contrast-150"
+                                role="button"> Explore Our Programs </a>
+                        </div>
+
+                        <!-- <p class="max-w-xs mx-auto mt-4 text-base font-normal text-gray-400 sm:mt-8">
+                            30 days free trial.<br />
+                            then plans start at $9.99
+                        </p> -->
+                    </div>
+
+                    <div class="lg:col-span-2 lg:order-first h-full">
+                        <img class="w-full h-full object-contain mx-auto hidden md:block drop-shadow-2xl transform md:scale-[1.3] scale-[1]"
+                            src="./img/mockup/app.png" alt="" />
+                        <img class="w-full h-full object-contain mx-auto md:hidden block drop-shadow-2xl transform md:scale-[1.3] scale-[1]"
+                            src="./img/mockup/mobile_app.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <footer class="pt-12 pb-8 bg-black lg:pt-20 xl:pt-24 sm:pt-16">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-y-12 xl:gap-x-16 gap-x-8">
+                <div class="col-span-2 md:col-span-4 lg:col-span-2">
+                    <a href="#" title="" class="flex">
+                        <img class="w-auto h-16" src="./img/spirit_nature_logo_text.png" alt="" />
+                    </a>
+                    <p class="mt-6 text-base font-normal text-gray-400">Explore Your Spirit, Embrace Your Nature</p>
+                </div>
+
+                <div>
+                    <h6 class="text-xs font-semibold tracking-widest text-gray-600 uppercase">Platform</h6>
+
+                    <ul class="mt-8 space-y-5">
+                        <li>
+                            <a href="#" title=""
+                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-x-1">
+                                About </a>
+                        </li>
+
+                        <li>
+                            <a href="#" title=""
+                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-x-1">
+                                Features </a>
+                        </li>
+
+                        <li>
+                            <a href="#" title=""
+                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-x-1">
+                                Pricing & Plans </a>
+                        </li>
+
+                        <li>
+                            <a href="#" title=""
+                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-x-1">
+                                Contact </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h6 class="text-xs font-semibold tracking-widest text-gray-600 uppercase">Legals</h6>
+
+                    <ul class="mt-8 space-y-5">
+                        <li>
+                            <a href="#" title=""
+                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-x-1">
+                                Guides </a>
+                        </li>
+
+                        <li>
+                            <a href="#" title=""
+                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-x-1">
+                                Terms & Conditions </a>
+                        </li>
+
+                        <li>
+                            <a href="#" title=""
+                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-x-1">
+                                Privacy Policy </a>
+                        </li>
+
+                        <li>
+                            <a href="#" title=""
+                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-x-1">
+                                Licensing </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h6 class="text-xs font-semibold tracking-widest text-gray-600 uppercase">Socials</h6>
+
+                    <ul class="mt-8 flex gap-x-5">
+                        <li>
+                            <a href="https://www.facebook.com/ProphetGodwinSpirit" target="_blank" title=""
+                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-y-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                    <path
+                                        d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z"
+                                        fill="currentColor" />
+                                </svg> </a>
+                        </li>
+
+                        <li>
+                            <a href="https://instagram.com/godwin_seer_psychic" target="_blank" title=""
+                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-y-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
+                                </svg> </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.tiktok.com/@godwin_seer_psychic" target="_blank" title=""
+                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-y-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48" />
+                                </svg> </a>
+                        </li>
+
+                        <li>
+                            <a href="https://youtube.com/@spiritnaturetv" target="_blank" title=""
+                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-y-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H6a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zM9 9v6a1 1 0 0 0 1.514.857l5-3a1 1 0 0 0 0-1.714l-5-3A1 1 0 0 0 9 9" />
+                                </svg> </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="mt-12 border-gray-900 lg:mt-20 xl:mt-24 sm:mt-16" />
+
+            <p class="mt-8 text-sm font-normal text-center text-gray-500">©
+                <script>document.write(new Date().getFullYear())</script>, All Rights Reserved by Spirit Nature Global
+                Network
+            </p>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -133,15 +133,10 @@
             });
         });
     </script>
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
-
-    <style>
-        .debug {
-            border: 1px solid red;
-        }
-    </style>
     <div class="">
         <header class="py-4 bg-gray-900 sm:py-6" x-data="{expanded: false}">
             <div class="px-4 sm:px-6 lg:px-8">
@@ -244,11 +239,12 @@
             </div>
         </header>
 
-        <section class="py-12 bg-gray-900 sm:pb-16 lg:pb-20 xl:pb-24">
+        <section
+            class="py-12 bg-gray-900 sm:pb-16 lg:pb-20 xl:pb-24 bg-[url('./img/stock/energy.jpg')] bg-repeat-none bg-center bg-cover bg-blend-multiply">
             <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
                 <div class="grid items-center max-w-5xl grid-cols-1 mx-auto gap-y-8 lg:grid-cols-5 gap-x-16">
                     <div class="max-w-md mx-auto text-center lg:max-w-none lg:col-span-3">
-                        <h1 class="text-3xl font-normal text-white uppercase sm:text-3xl lg:text-5xl xl:text-6xl">
+                        <h1 class="text-3xl font-semibold text-white uppercase sm:text-3xl lg:text-5xl xl:text-6xl">
                             Welcome To <br /> <span
                                 class="text-transparent bg-clip-text bg-gradient-to-r from-[#003A74] to-[#1D9A4E]">Spirit
                                 Nature TV</span>
@@ -355,10 +351,25 @@
         <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div
                 class="grid items-center max-w-md grid-cols-1 mx-auto md:max-w-5xl gap-y-8 md:grid-cols-2 gap-x-12 xl:gap-x-16">
-                <div>
-                    <img class="w-full max-w-xs mx-auto"
-                        src="https://landingfoliocom.imgix.net/store/collection/dusk/images/features/4/phone-mockup.png"
-                        alt="" />
+                <div class="relative">
+                    <div class="absolute inset-0">
+                        <svg class="filter blur-3xl" style="filter: blur(64px)" width="343" height="339" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M158.612 289.158C68.377 300.506 12.834 390.699.684 294.077-11.467 197.455 205.537 12.391 295.772 1.043c90.236-11.347 19.532 155.318 31.683 251.94 12.151 96.622-78.607 24.828-168.843 36.175Z"
+                                fill="url(#a)" />
+                            <defs>
+                                <linearGradient id="a" x1="335.877" y1="-4" x2="338.499" y2="338.656"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" style="stop-color: var(--color-cyan-500)" />
+                                    <stop offset="100%" style="stop-color: var(--color-purple-500)" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+
+                    <img class="w-full max-w-xs mx-auto hover:scale-105 duration-500 transform hover:cursor-pointer shadow-lg hover:drop-shadow-2xl drop-shadow-[#1D9A4E]/50"
+                        src="./img/mockup/mobile_app.png" alt="" />
                 </div>
 
                 <div>
@@ -441,7 +452,18 @@
                                     connects us all, leading to personal breakthroughs and growth.</p>
                             </div>
                         </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="py-12 bg-black sm:py-16 lg:py-20 xl:py-24">
+        <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+            <div
+                class="grid items-center max-w-md grid-cols-1 mx-auto lg:max-w-none lg:mx-0 lg:grid-cols-2 gap-x-24 xl:gap-x-48 gap-y-12">
+                <div>
+                    <ul class="divide-y divide-gray-800">
                         <li class="flex gap-x-5 items-start py-6 sm:py-10">
                             <div class="relative w-10 h-10 shrink-0">
                                 <div
@@ -515,23 +537,6 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-12 bg-black sm:py-16 lg:py-20 xl:py-24">
-        <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-            <div
-                class="grid items-center max-w-md grid-cols-1 mx-auto lg:max-w-none lg:mx-0 lg:grid-cols-2 gap-x-24 xl:gap-x-48 gap-y-12">
-                <div>
-                    <h2 class="text-3xl font-normal text-white sm:text-4xl lg:text-5xl xl:text-6xl">Analysis Data</h2>
-                    <p class="mt-8 text-xl font-normal text-white"><span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500">Keep
-                            control on your projects.</span> Don't make the same mistakes.</p>
-                    <p class="mt-8 text-lg font-normal text-gray-400">Amet minim mollit non deserunt ullamco est sit
-                        aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
-                        consequat.</p>
-                </div>
 
                 <div class="relative">
                     <div class="absolute inset-0">
@@ -550,9 +555,8 @@
                         </svg>
                     </div>
 
-                    <img class="relative w-full mx-auto"
-                        src="https://landingfoliocom.imgix.net/store/collection/dusk/images/features/5/feature.png"
-                        alt="" />
+                    <img class="relative w-full mx-auto rounded-lg hover:cursor-pointer shadow-lg hover:drop-shadow-2xl drop-shadow-[#1D9A4E]/50 hover:scale-105 duration-500 transform"
+                        src="./img/stock/energy.jpg" alt="" />
                 </div>
             </div>
         </div>
@@ -584,155 +588,54 @@
 
         <div class="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-24">
-                <ul class="divide-y divide-gray-800">
-                        <li class="flex gap-x-5 items-start py-6 sm:py-10">
-                            <div class="relative w-10 h-10 shrink-0">
-                                <div
-                                    class="absolute rounded-full -inset-px bg-gradient-to-r from-cyan-500 to-purple-500">
-                                </div>
-                                <div
-                                    class="relative inline-flex items-center justify-center w-10 h-10 rounded-full bg-base-900">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"
-                                        class="h-5 w-5 text-white">
-                                        <path fill="currentColor"
-                                            d="M92.438 28.97C75.263 47.722 60.826 69.69 49.593 94L167.5 204.656l-12.78 13.625L41.905 112.407c-9.19 24.257-15.377 50.455-18.156 77.844l116.156 58.72l-8.437 16.686L22.312 210.47c-.963 24.45.777 49.666 5.437 75.155l100.53 8.313l-1.53 18.625l-94.97-7.844c.743 3.09 1.515 6.185 2.345 9.28c4.43 16.51 9.94 32.34 16.375 47.438c8.757-1.615 17.808-3.274 27.813-5.157c26.754-5.033 53.093-10.06 53.093-10.06l3.5 18.342s-26.368 5.054-53.156 10.094c-8.012 1.508-15.797 2.97-23.188 4.344c8.65 17.507 18.62 33.887 29.657 49l60.843-34.28L158.22 410l-58.407 32.938c12.202 14.79 25.482 28.186 39.624 40l17.157-20.344c1.38-20.537 4.963-37.725 14.375-51.72c6.338-9.425 15.44-16.826 27.155-21.937C189.86 376.115 183.3 361.62 179 345.594c-14.526-54.15.58-108.49 36.406-138.094L92.436 28.97zm330.843 0L300.314 207.5c35.826 29.604 50.964 83.943 36.437 138.094c-4.26 15.877-10.768 30.237-18.938 42.97c12.345 5.384 21.554 13.502 27.5 23.655c7.81 13.333 10.495 29.117 11.407 47.467l19.592 23.25c14.14-11.813 27.423-25.208 39.625-40L357.5 410l9.188-16.28L427.53 428c11.04-15.117 21.006-31.49 29.658-49c-7.4-1.374-15.207-2.836-23.22-4.344c-26.787-5.04-53.156-10.094-53.156-10.094l3.5-18.343s26.372 5.027 53.125 10.06a8378 8378 0 0 0 27.813 5.19a357 357 0 0 0 16.375-47.47c.83-3.095 1.602-6.19 2.344-9.28L389 312.56l-1.53-18.625l100.53-8.31c4.66-25.49 6.37-50.705 5.406-75.156L384.25 265.655l-8.438-16.687L492 190.25c-2.783-27.4-8.956-53.61-18.156-77.875L361.03 218.28l-12.81-13.624L466.124 94c-11.236-24.31-25.668-46.277-42.844-65.03zM256.095 290.03c-10.452 0-20.172 5.342-27.78 15.126c-7.61 9.784-12.658 23.895-12.658 39.688s5.047 29.903 12.656 39.687c7.61 9.785 17.33 15.158 27.782 15.158s20.14-5.373 27.75-15.157s12.656-23.893 12.656-39.686s-5.047-29.904-12.656-39.688s-17.298-15.125-27.75-15.125zm39.625 111.19c-10.36 11.14-24.236 18.342-39.626 18.342c-14.957 0-28.49-6.798-38.75-17.406c-2.662.66-5.147 1.384-7.438 2.188c-11.464 4.02-18.388 9.46-23.437 16.97c-9.19 13.66-11.542 37.05-11.907 69.248h163.812c-.135-31.55-1.154-55.19-9.188-68.906c-4.42-7.55-10.596-12.946-21.562-17.062c-3.467-1.302-7.433-2.437-11.906-3.375z" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="flex flex-col gap-y-3 text-white">
-                                <h4 class="text-lg font-semibold text-white sm:text-xl">City of Angels (Los Angeles)
-                                </h4>
-                                <p class="text-sm">Experience the captivating world of angels through powerful
-                                    testimonies and
-                                    stories
-                                    of miraculous encounters. From
-                                    moments of divine guidance to life-altering events, explore the profound impact of
-                                    angels in our lives and unlock
-                                    the
-                                    mysteries of the spirit realm.</p>
-                            </div>
+                <div class="pt-12 sm:pt-16 lg:py-36">
+                    <h2 class="text-3xl font-normal text-white sm:text-4xl lg:text-5xl xl:text-6xl">Become an Early
+                        Adopter of Spirit Nature TV's Mobile App</h2>
+                    <p class="mt-4 text-lg font-normal text-white sm:mt-6 sm:text-xl">Stay connected to your spiritual
+                        journey and never miss a moment of inspiration.</p>
+
+                    <p class="mt-8 text-lg font-normal text-white sm:text-xl sm:mt-12">Join Spirit Nature TV to:</p>
+                    <ul class="mt-5 space-y-2">
+                        <li class="flex items-start text-lg font-normal text-gray-300">
+                            <span class="mr-3 text-lg"> 🌟 </span>
+
+                            Receive weekly updates on spiritual programs and insights
                         </li>
 
-                        <li class="flex gap-x-5 items-start py-6 sm:py-10">
-                            <div class="relative w-10 h-10 shrink-0">
-                                <div
-                                    class="absolute rounded-full -inset-px bg-gradient-to-r from-cyan-500 to-purple-500">
-                                </div>
-                                <div
-                                    class="relative inline-flex items-center justify-center w-10 h-10 rounded-full bg-base-900">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"
-                                        class="text-white h-5 w-5">
-                                        <path fill="currentColor"
-                                            d="m256 59.8l-101.8 84.8l11.6 13.8L247 90.7v40.6l-92.8 77.3l11.6 13.8l81.2-67.7v40.6l-92.8 77.3l11.6 13.8l81.2-67.7v60.8h18v-60.8l81.2 67.7l11.6-13.8l-92.8-77.3v-40.6l81.2 67.7l11.6-13.8l-92.8-77.3V90.7l81.2 67.7l11.6-13.8zM69.73 64.5l14 14h56.57l14-14zm287.97 0l14 14h56.6l14-14zM89 96.5v222h46v-222zm288 0v222h46v-222zM71 277c-25.36 1-43.85 17.5-43.85 35.6c0 10.9 6.44 21.5 18.69 28.6l6.73 3.9l-2.85 7.2c-.49 1.2-.69 2.4-.69 3.5c0 3.1 1.7 6.9 6.83 11l12.41 9.9l-14.91 5.5c-11.02 4.1-19.3 9-24.36 13.6s-6.69 8.5-6.69 11.8s1.6 7 6.26 11.4s12.21 9 21.95 12.8c19.47 7.8 47.49 12.9 78.48 12.9c32.8 0 63.9-6 84-15.4l6.4-3l4.5 5.6c8.9 11.3 29.9 20.3 53.4 20.3s44.6-9 53.5-20.3l4.5-5.6l6.5 3.1c12.9 6.1 28.6 9.6 44.8 9.6c21.9 0 41.5-6.1 55.1-15.4c13.7-9.3 21-21.1 21-33.5q0-5.25-1.8-10.5l-2.3-6.6l5.8-3.9c11.6-7.7 17.4-18 17.4-28.2c0-10-5.2-19.2-14.9-26.5c-6.8-5.1-15.8-9-25.9-11v33.1h-82v-35c-7.1-3.6-16-5.9-25.6-5.9c-18.1 0-33.9 8.2-39.9 18l-4.1 6.9l-7.3-3.3c-10.2-4.6-21.8-7-33.6-7c-14.6 0-28.8 3.9-40.5 10.8l-5.2 3l-4.8-3.6c-11.2-8.3-27.4-13.8-45-15v31.1H71z" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="flex flex-col gap-y-3 text-white">
-                                <h4 class="text-lg font-semibold text-white sm:text-xl">Nature Wisdom</h4>
-                                <p class="text-sm">Join Godwin as he shares wisdom that intertwines life, business,
-                                    success, and spirituality. With a focus on gratitude
-                                    and mindfulness, these lessons inspire a holistic approach to personal and
-                                    professional growth, helping you navigate
-                                    life’s complexities with grace and purpose.</p>
-                            </div>
+                        <li class="flex items-start text-lg font-normal text-gray-300">
+                            <span class="mr-3 text-lg"> 🎁 </span>
+                            Get exclusive early access to special content and features
                         </li>
 
-                        <li class="flex gap-x-5 items-start py-6 sm:py-10">
-                            <div class="relative w-10 h-10 shrink-0">
-                                <div
-                                    class="absolute rounded-full -inset-px bg-gradient-to-r from-cyan-500 to-purple-500">
-                                </div>
-                                <div
-                                    class="relative inline-flex items-center justify-center w-10 h-10 rounded-full bg-base-900">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"
-                                        class="w-5 h-5 text-white">
-                                        <path fill="currentColor"
-                                            d="M179.813 20.72v81.25L135.78 75.624l17.564 46.938l-115.656-20.938l84.718 49.906H20v27.345l110.47 14.875l96.593-29.188c-11.303-11.87-18.594-30.743-18.594-52c0-35.926 20.87-65.062 46.624-65.062c25.753 0 46.625 29.136 46.625 65.063c0 20.847-7.038 39.375-17.97 51.28l99.03 29.907l112.5-15.156V151.53H394.19l84.718-49.905l-120.437 21.78l17.874-47.718l-48.656 29.126V20.72zM495.28 223.343l-112.5 22.437l-55.405-13.124l-28.03 118.313l16.592 145h51.688L329.25 351.22l46.53 27.842l-21.31-56.937l124.436 22.5l-91.125-53.688h107.5v-67.593zM20 223.75v67.188h108.813l-91.125 53.687L157.31 322.97L136.345 379l38.47-23l-28.595 139.97h48.155l12.905-144.41l-21.685-118.84l-55.125 13.06z" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="flex flex-col gap-y-3 text-white">
-                                <h4 class="text-lg font-semibold text-white sm:text-xl">Energy in Motion</h4>
-                                <p class="text-sm">Witness the powerful connection between spirituality and the
-                                    metaphysical. Godwin’s abilities in prophecy, healing,
-                                    deliverance, and psychic insight showcase how spiritual energy can transform lives.
-                                    Explore the flow of energy that
-                                    connects us all, leading to personal breakthroughs and growth.</p>
-                            </div>
-                        </li>
-
-                        <li class="flex gap-x-5 items-start py-6 sm:py-10">
-                            <div class="relative w-10 h-10 shrink-0">
-                                <div
-                                    class="absolute rounded-full -inset-px bg-gradient-to-r from-cyan-500 to-purple-500">
-                                </div>
-                                <div
-                                    class="relative inline-flex items-center justify-center w-10 h-10 rounded-full bg-base-900">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                                        class="h-5 w-5 text-white">
-                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-width="2" d="M7 10h14l-4-4m0 8H3l4 4" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="flex flex-col gap-y-3 text-white">
-                                <h4 class="text-lg font-semibold text-white sm:text-xl">Law of Attraction &
-                                    Manifestation
-                                </h4>
-                                <p class="text-sm">Unlock the power of your thoughts and visualizations to manifest your
-                                    dreams. Learn to harness inner energy, focus on
-                                    your desires, and align your intentions with the universe. Through positive thinking
-                                    and vivid imagination, watch as the
-                                    universe brings your aspirations to life.</p>
-                            </div>
-                        </li>
-
-                        <li class="flex gap-x-5 items-start py-6 sm:py-10">
-                            <div class="relative w-10 h-10 shrink-0">
-                                <div
-                                    class="absolute rounded-full -inset-px bg-gradient-to-r from-cyan-500 to-purple-500">
-                                </div>
-                                <div
-                                    class="relative inline-flex items-center justify-center w-10 h-10 rounded-full bg-base-900">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                                        class="text-white h-5 w-5">
-                                        <path fill="currentColor" d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="flex flex-col gap-y-3 text-white">
-                                <h4 class="text-lg font-semibold text-white sm:text-xl">International Prophecies</h4>
-                                <p class="text-sm">Explore Godwin’s remarkable gift of foreseeing major global events.
-                                    From political upheavals to economic shifts and
-                                    natural disasters, his prophetic insights provide an early warning system, helping
-                                    individuals and communities stay
-                                    informed and prepared for the future.</p>
-                            </div>
-                        </li>
-
-                        <li class="flex gap-x-5 items-start py-6 sm:py-10">
-                            <div class="relative w-10 h-10 shrink-0">
-                                <div
-                                    class="absolute rounded-full -inset-px bg-gradient-to-r from-cyan-500 to-purple-500">
-                                </div>
-                                <div
-                                    class="relative inline-flex items-center justify-center w-10 h-10 rounded-full bg-base-900">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                                        class="text-white h-5 w-5">
-                                        <path fill="currentColor"
-                                            d="M10.5 15.5h3V13H16v-3h-2.5V7.5h-3V10H8v3h2.5zM12 22q-3.475-.875-5.738-3.988T4 11.1V5l8-3l8 3v6.1q0 3.8-2.262 6.913T12 22" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="flex flex-col gap-y-3 text-white">
-                                <h4 class="text-lg font-semibold text-white sm:text-xl">Health Talks</h4>
-                                <p class="text-sm">Embrace a balanced lifestyle that nurtures both physical and
-                                    spiritual well-being. Through holistic approaches to
-                                    nutrition, exercise, and mindfulness, learn practical strategies to enhance your
-                                    health and find inner peace.</p>
-                            </div>
+                        <li class="flex items-start text-lg font-normal text-gray-300">
+                            <span class="mr-3 text-lg"> 🙏 </span>
+                            Be among the first to experience the app’s full range of spiritual shows
                         </li>
                     </ul>
+
+                    <div
+                        class="flex flex-col items-center justify-center mt-8 space-y-5 md:mt-12 sm:flex-row sm:space-y-0 sm:space-x-5 sm:justify-start">
+                        <a href="#" title=""
+                            class="relative flex transition-all duration-200 transform hover:-translate-y-1"
+                            role="button">
+                            <div class="absolute rounded-xl bg-gradient-to-r from-cyan-500 to-purple-500 -inset-px">
+                            </div>
+                            <img class="relative w-auto rounded-xl h-14 md:h-12 lg:h-16"
+                                src="https://landingfoliocom.imgix.net/store/collection/dusk/images/application/2/app-store-button.svg"
+                                alt="" />
+                        </a>
+
+                        <a href="#" title=""
+                            class="relative flex transition-all duration-200 transform hover:-translate-y-1"
+                            role="button">
+                            <div class="absolute rounded-xl bg-gradient-to-r from-cyan-500 to-purple-500 -inset-px">
+                            </div>
+                            <img class="relative w-auto rounded-xl h-14 md:h-12 lg:h-16"
+                                src="https://landingfoliocom.imgix.net/store/collection/dusk/images/application/2/play-store-button.svg"
+                                alt="" />
+                        </a>
+                    </div>
+                </div>
 
                 <div class="self-end mt-12 lg:mt-0">
                     <img class="w-full max-w-sm mx-auto transform xl:translate-y-16 lg:max-w-none"
@@ -748,11 +651,9 @@
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-y-12 xl:gap-x-16 gap-x-8">
                 <div class="col-span-2 md:col-span-4 lg:col-span-2">
                     <a href="#" title="" class="flex">
-                        <img class="w-auto h-9"
-                            src="https://landingfoliocom.imgix.net/store/collection/dusk/images/logo.svg" alt="" />
+                        <img class="w-auto h-16" src="./img/spirit_nature_logo_text.png" alt="" />
                     </a>
-                    <p class="mt-6 text-base font-normal text-gray-400">Lorem ipsum dolor sit amet, consec tetur
-                        adipiscing elit.</p>
+                    <p class="mt-6 text-base font-normal text-gray-400">Explore Your Spirit, Embrace Your Nature</p>
                 </div>
 
                 <div>
@@ -786,66 +687,6 @@
                 </div>
 
                 <div>
-                    <h6 class="text-xs font-semibold tracking-widest text-gray-600 uppercase">Resources</h6>
-
-                    <ul class="mt-8 space-y-5">
-                        <li>
-                            <a href="#" title=""
-                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-x-1">
-                                Account </a>
-                        </li>
-
-                        <li>
-                            <a href="#" title=""
-                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-x-1">
-                                Tools </a>
-                        </li>
-
-                        <li>
-                            <a href="#" title=""
-                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-x-1">
-                                Newsletter </a>
-                        </li>
-
-                        <li>
-                            <a href="#" title=""
-                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-x-1">
-                                FAQ </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h6 class="text-xs font-semibold tracking-widest text-gray-600 uppercase">Products</h6>
-
-                    <ul class="mt-8 space-y-5">
-                        <li>
-                            <a href="#" title=""
-                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-x-1">
-                                Swiftly </a>
-                        </li>
-
-                        <li>
-                            <a href="#" title=""
-                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-x-1">
-                                Rareblocks </a>
-                        </li>
-
-                        <li>
-                            <a href="#" title=""
-                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-x-1">
-                                ClarityUI </a>
-                        </li>
-
-                        <li>
-                            <a href="#" title=""
-                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-x-1">
-                                Landingfolio </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
                     <h6 class="text-xs font-semibold tracking-widest text-gray-600 uppercase">Legals</h6>
 
                     <ul class="mt-8 space-y-5">
@@ -874,11 +715,57 @@
                         </li>
                     </ul>
                 </div>
+
+                <div>
+                    <h6 class="text-xs font-semibold tracking-widest text-gray-600 uppercase">Socials</h6>
+
+                    <ul class="mt-8 flex gap-x-5">
+                        <li>
+                            <a href="https://www.facebook.com/ProphetGodwinSpirit" target="_blank" title=""
+                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-y-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                    <path
+                                        d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z"
+                                        fill="currentColor" />
+                                </svg> </a>
+                        </li>
+
+                        <li>
+                            <a href="https://instagram.com/godwin_seer_psychic" target="_blank" title=""
+                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-y-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
+                                </svg> </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.tiktok.com/@godwin_seer_psychic" target="_blank" title=""
+                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-y-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48" />
+                                </svg> </a>
+                        </li>
+
+                        <li>
+                            <a href="https://youtube.com/@spiritnaturetv" target="_blank" title=""
+                                class="flex text-base font-normal transition-all transform text-gray-50 hover:text-white duruation hover:translate-y-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H6a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zM9 9v6a1 1 0 0 0 1.514.857l5-3a1 1 0 0 0 0-1.714l-5-3A1 1 0 0 0 9 9" />
+                                </svg> </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <hr class="mt-12 border-gray-900 lg:mt-20 xl:mt-24 sm:mt-16" />
 
-            <p class="mt-8 text-sm font-normal text-center text-gray-500">© 2022, All Rights Reserved by Landingfolio
+            <p class="mt-8 text-sm font-normal text-center text-gray-500">©
+                <script>document.write(new Date().getFullYear())</script>, All Rights Reserved by Spirit Nature Global
+                Network
+            </p>
             </p>
         </div>
     </footer>
